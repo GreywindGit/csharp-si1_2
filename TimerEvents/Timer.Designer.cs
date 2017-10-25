@@ -1,6 +1,6 @@
 ﻿namespace TimerEvents
 {
-    partial class Form1
+    partial class Timer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.SuspendLayout();
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(12, 32);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(544, 23);
+            this.progressBar.TabIndex = 0;
+            // 
+            // Timer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(568, 100);
+            this.Controls.Add(this.progressBar);
+            this.Name = "Timer";
+            this.Text = "Timer";
+            this.Load += new System.EventHandler(this.Timer_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
 
